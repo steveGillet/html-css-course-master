@@ -1,0 +1,200 @@
+/* universal selector, applies to all elements but doesn't get inherited */
+* {
+  /* border-top: 10px solid #ea62ca; */
+  /* global reset, set everything to 0 */
+  margin: 0;
+  padding: 0;
+}
+
+/* does not apply to all elements, does not select
+elements just inherit them if they are in body */
+body {
+  background-color: bisque;
+  font-family: sans-serif;
+  color: #444;
+  /* only adds to body doesn't inherit in all elements */
+  border-top: 10px solid #f33f72;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.mainHead {
+  background-color: #f7f7f7;
+  /* padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; 
+  same first is top and bottom second is left and right*/
+  padding: 20px 40px;
+  margin-bottom: 70px;
+  /* common to use margin bottom to create vertical space */
+}
+
+.postHeader {
+  margin-bottom: 40px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  /* color: #444; */
+}
+
+h1,
+h2,
+h3 {
+  color: #ea62ca;
+}
+
+h1 {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 35px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 15px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+/* last list item wont have the margin below */
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* footer p {
+  font-size: 16px;
+} */
+
+/* article header p {
+  font-style: italic;
+} */
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+.relatedAuthor {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related {
+  list-style: none;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 6px solid #ea62ca;
+  border-bottom: 6px solid #ea62ca;
+  padding: 55px 0;
+}
+
+/* .firstLi {
+  font-weight: bold;
+} */
+
+/* pseudo class */
+li:first-child {
+  font-weight: bold;
+}
+li:last-child {
+  font-style: italic;
+}
+li:nth-child(2) {
+  color: seagreen;
+}
+li:nth-child(odd) {
+  color: salmon;
+}
+
+/* does not work because p is not first child of article */
+article p:first-child {
+  color: firebrick;
+}
+/* does work because the last child is a p */
+article p:last-child {
+  color: firebrick;
+}
+
+/* Always defined in this order */
+a:link {
+  color: #ea62ca;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ea62ca;
+  text-decoration: none;
+}
+
+a:hover {
+  color: sandybrown;
+  font-weight: bold;
+  text-decoration: underline wavy sandybrown;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+/* selector conflicts, id has priority */
+#copyright {
+  color: olive;
+}
+.copyright {
+  color: floralwhite;
+}
+.text {
+  color: aqua;
+}
+footer p {
+  color: azure !important;
+}
+
+/* nav a:link,
+nav strong {
+  font-size: 19px;
+} */
+
+nav {
+  font-size: 19px;
+}
