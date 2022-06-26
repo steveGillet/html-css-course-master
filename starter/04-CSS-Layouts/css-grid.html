@@ -56,20 +56,40 @@
         /* gap: 30px; */
         column-gap: 30px;
         row-gap: 60px;
+
+        /* TEMP */
+        display: none;
       }
 
       .container--2 {
-        display: none;
         /* STARTER */
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
-        margin: 100px;
+        margin: 40px;
 
-        width: 1000px;
+        width: 700px;
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 125px 250px 100px;
+        grid-template-rows: 300px 125px;
+
+        /* ALIGNING TRACKS IN CONTAINER */
+        justify-content: center;
+        /* justify-content: space-between; */
+
+        align-content: center;
+
+        /* ALIGNING ITEM IN CELL */
+        align-items: end;
+        justify-items: end;
+      }
+
+      .el--3 {
+        align-self: center;
+        justify-self: center;
       }
     </style>
   </head>

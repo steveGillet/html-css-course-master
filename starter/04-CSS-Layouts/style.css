@@ -9,8 +9,8 @@
 body {
   color: #444;
   font-family: sans-serif;
-
   border-top: 10px solid #1098ad;
+
   position: relative;
 }
 
@@ -27,7 +27,7 @@ body {
   padding-left: 40px;
   padding-right: 40px; */
   padding: 20px 40px;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   /* height: 80px; */
 }
 
@@ -37,7 +37,7 @@ nav {
 }
 
 article {
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 .post-header {
@@ -347,20 +347,43 @@ footer {
   font-style: italic;
 }
 
-.row {
+/* .row {
   display: flex;
   gap: 75px;
   margin-bottom: 60px;
   align-items: flex-start;
 }
 
-article: {
-  /* flex: 0 0 825px; */
-  /* set flex to 1 so it just grows to size needed */
+article {
+  flex: 0 0 825px;
+  set flex to 1 so it just grows to size needed 
   flex: 1;
   margin-bottom: 0;
 }
 
 aside {
   flex: 0 0 300px;
+} */
+
+/* CSS GRID LAYOUT */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+
+.main-header {
+  grid-column: 1 / -1;
+}
+
+article {
+}
+
+aside {
+}
+
+footer {
+  grid-column: 1 / -1;
 }
