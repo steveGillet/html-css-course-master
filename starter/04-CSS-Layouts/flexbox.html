@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flexbox</title>
     <style>
-      .el--1 {
-        background-color: blueviolet;
-      }
       .el--2 {
         background-color: orangered;
       }
@@ -21,9 +18,12 @@
       }
       .el--5 {
         background-color: palevioletred;
+        align-self: stretch;
+        order: 1;
       }
       .el--6 {
         background-color: steelblue;
+        order: -1;
       }
       .el--7 {
         background-color: yellow;
@@ -32,14 +32,46 @@
         background-color: crimson;
       }
 
+      .el {
+        /* margin-right: 30px; */
+        /* defaults */
+        /* flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto; */
+
+        /* flex-basis: 200px; */
+        /* flex-shrink: 0; */
+        /* flex: 0 0 200px; */
+
+        /* flex-grow: 1; */
+        flex: 1;
+      }
+
+      .el--1 {
+        background-color: blueviolet;
+        align-self: flex-start;
+        /* order: 2; */
+        /* flex-grow: 2; */
+      }
+
       .container {
         /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
-        font-size: 40px;
+        font-size: 30px;
         margin: 40px;
 
         /* FLEXBOX */
+        display: flex;
+        /* flex items, child elements of flex container */
+
+        /* vertical alignment */
+        align-items: center;
+        /* horizontal alignment */
+        justify-content: flex-start;
+        /* shares remaining space between */
+        /* justify-content: space-between; */
+        /* gap: 30px; */
       }
     </style>
   </head>
@@ -51,8 +83,8 @@
       <div class="el el--4">are</div>
       <div class="el el--5">amazing</div>
       <div class="el el--6">languages</div>
-      <div class="el el--7">to</div>
-      <div class="el el--8">learn</div>
+      <!-- <div class="el el--7">to</div>
+      <div class="el el--8">learn</div> -->
     </div>
   </body>
 </html>
